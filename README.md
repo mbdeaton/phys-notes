@@ -1,8 +1,9 @@
 # Phys-Notes
-Brett Deaton
 
-A weekly photo blog: things spotted in nature that prompt physics questions,
-followed by concrete analysis.
+[phys-notes.netlify.com](https://phys-notes.netlify.app/)
+
+A photo blog by Brett Deaton. Things spotted in nature that prompt
+physics questions and analysis.
 
 ## Tools
 - Vite + React — frontend framework
