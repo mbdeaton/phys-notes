@@ -8,9 +8,21 @@ const query = `*[_type == "post"] | order(publishedAt desc) [0] {
 }`;
 
 export default function LatestPost() {
-  const [post, setPost] = useState(null);
+  const [post, setPost] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    client.fetch(query).then(setPost);
+    client
+      .fetch(query)
+      .then((data) => setPost(data))
+      .catch((err) => setError(err.message || "Failed to load post"))
+      .finally(() => setLoading(false));
   }, []);
-  return post ? <Post post={post} /> : null;
+
+  if (loading) return <div>Loading…</div>;
+  if (error) return <div>Error: {error}</div>;
+  if (!post) return <div>No post found.</div>;
+
+  return <Post post={post} />;
 }
