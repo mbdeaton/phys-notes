@@ -4,13 +4,37 @@
   padding: 0;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  --max-width: 720px;
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --nav-bg: rgba(2, 6, 23, 0.03);
+  --nav-hover: rgba(2, 6, 23, 0.06);
+  --nav-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+}
+
 body {
-  font-family: Georgia, serif;
-  max-width: 720px;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1rem;
-  background: #fff;
-  color: #111;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.7;
 }
 
@@ -37,4 +61,52 @@ nav {
   margin-top: 3rem;
   display: flex;
   justify-content: space-between;
+}
+
+/* Post navigation: sleek pill buttons */
+.post-nav {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.nav-button {
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--nav-bg);
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+.nav-button .arrow {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.nav-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--nav-shadow);
+  background: var(--nav-hover);
+}
+
+.nav-button:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .nav-button {
+    padding: 8px 10px;
+    gap: 6px;
+  }
 }
