@@ -30,24 +30,22 @@ export default function Post({ post }: { post: PostData }) {
         <PortableText value={post.essay} />
       </article>
       <nav className="post-nav">
-        {post.prev && (
-          <NavButton
-            to={`/posts/${post.prev.current}`}
-            label="Prev"
-            direction="left"
-            ariaLabel="Previous post"
-            className="prev"
-          />
-        )}
-        {post.next && (
-          <NavButton
-            to={`/posts/${post.next.current}`}
-            label="Next"
-            direction="right"
-            ariaLabel="Next post"
-            className="next"
-          />
-        )}
+        <NavButton
+          to={post.prev ? `/posts/${post.prev.current}` : undefined}
+          label="Prev"
+          direction="left"
+          ariaLabel="Previous post"
+          className="prev"
+          disabled={!post.prev}
+        />
+        <NavButton
+          to={post.next ? `/posts/${post.next.current}` : undefined}
+          label="Next"
+          direction="right"
+          ariaLabel="Next post"
+          className="next"
+          disabled={!post.next}
+        />
       </nav>
     </main>
   );
