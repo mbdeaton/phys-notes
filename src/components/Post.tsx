@@ -1,6 +1,7 @@
 import { urlFor } from "../sanityClient";
 import { PortableText } from "@portabletext/react";
 import { Link } from "react-router-dom";
+import NavButton from "./NavButton";
 
 interface PostData {
   photo: {
@@ -30,24 +31,22 @@ export default function Post({ post }: { post: PostData }) {
       </article>
       <nav className="post-nav">
         {post.prev && (
-          <Link
-            className="nav-button prev"
+          <NavButton
             to={`/posts/${post.prev.current}`}
-            aria-label="Previous post"
-          >
-            <span className="arrow">←</span>
-            <span className="label">Prev</span>
-          </Link>
+            label="Prev"
+            direction="left"
+            ariaLabel="Previous post"
+            className="prev"
+          />
         )}
         {post.next && (
-          <Link
-            className="nav-button next"
+          <NavButton
             to={`/posts/${post.next.current}`}
-            aria-label="Next post"
-          >
-            <span className="label">Next</span>
-            <span className="arrow">→</span>
-          </Link>
+            label="Next"
+            direction="right"
+            ariaLabel="Next post"
+            className="next"
+          />
         )}
       </nav>
     </main>
