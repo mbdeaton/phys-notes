@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 interface NavButtonProps {
   to?: string;
   label: string;
-  direction?: "left" | "right";
+  direction?: "left" | "right" | "none";
   ariaLabel?: string;
   className?: string;
   disabled?: boolean;

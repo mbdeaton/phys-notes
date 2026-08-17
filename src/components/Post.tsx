@@ -39,6 +39,13 @@ export default function Post({ post }: { post: PostData }) {
           disabled={!post.prev}
         />
         <NavButton
+          to="/gallery"
+          label="All"
+          direction="none"
+          ariaLabel="View all posts"
+          className="all"
+        />
+        <NavButton
           to={post.next ? `/posts/${post.next.current}` : undefined}
           label="Next"
           direction="right"
