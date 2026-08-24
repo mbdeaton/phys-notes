@@ -21,11 +21,13 @@ interface PostData {
 export default function Post({ post }: { post: PostData }) {
   return (
     <main>
-      <img
-        src={urlFor(post.photo).width(1200).format("webp").url()}
-        alt={post.photo.alt}
-      />
-      <p className="caption">{post.caption}</p>
+      <figure>
+        <img
+          src={urlFor(post.photo).width(1200).format("webp").url()}
+          alt={post.photo.alt}
+        />
+        <figcaption>{post.caption}</figcaption>
+      </figure>
       <article>
         <PortableText value={post.essay} />
       </article>
