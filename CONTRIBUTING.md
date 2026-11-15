@@ -6,7 +6,7 @@ This project spans two codebases:
 
 - [phys-notes](https://github.com/mbdeaton/phys-notes):
   the Vite/React frontend (this repo)
-- [phys-notes-studio](https://github.com/mbdeaton/studio-phys-notes):
+- [studio-phys-notes](https://github.com/mbdeaton/studio-phys-notes):
   the Sanity Studio
 
 Frontend changes go here. Schema changes (adding or modifying content fields)
@@ -45,7 +45,7 @@ Push to `main`: Netlify auto-deploys on every push, no manual deploy step.
 
 ## Publishing workflow (ongoing)
 1. Open `yourname.sanity.studio` in the browser
-2. Create a new **Post** — upload photo, write caption + essay, set date
+2. Create a new **Post** — upload note contents, set date
 3. Click **Publish**
 4. Site reflects new post immediately — no code change or deploy needed
 

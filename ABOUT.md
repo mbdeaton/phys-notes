@@ -1,13 +1,7 @@
 # About Phys-Notes
 
-A photo + essay blog of things spotted in everday life that inspire inquiries
-in the domain of physics or any predictive science.
-
-## Name
-* Everyday Physicist
-* Everyday Physics
-* Physics Notices
-* Phys Notes
+A collection of letters written to young physicists, inspired by photos taken
+from everday life.
 
 ## Post structure
 * Title: 1-6 words. Noun phrase describing the raw observation.
@@ -15,9 +9,4 @@ in the domain of physics or any predictive science.
 * Picture: Ideally square.
 * Alt-text: Super-brief, describing the overall view.
 * Caption: Entirely descriptive. No "notice".
-* Essay: A lightweight effort to raise one or more physics questions and answer
-  them. Generally (but not always) avoids "why" and "how" investigations
-  because they end unsatisfactorily (e.g. because red light has a lesser angle
-  of refraction than blue light...okay, yeah but why?) and instead aims
-  for prediction. No promise to be correct, or deeply researched, just a
-  physicist's first take.
+* Note: A letter to a young physicist, by name, may contain figures.

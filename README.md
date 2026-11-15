@@ -2,8 +2,8 @@
 
 [phys-notes.netlify.com](https://phys-notes.netlify.app/)
 
-A photo blog by Brett Deaton. Things spotted in nature that prompt
-physics questions and analysis.
+A series of notes by Brett Deaton to young physicists. Inspired by things
+spotted in nature that prompt questions or analysis.
 
 ## Tools
 - Vite + React — frontend framework
