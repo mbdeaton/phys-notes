@@ -39,9 +39,9 @@ export default function Post({ post }: { post: PostData }) {
         />
         <NavButton
           to="/gallery"
-          label="All"
+          label="Gallery"
           direction="none"
-          ariaLabel="View all posts"
+          ariaLabel="View gallery"
           className="all"
         />
         <NavButton

@@ -38,6 +38,119 @@ body {
   line-height: 1.7;
 }
 
+.site-shell {
+  width: 100%;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.site-title {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: var(--muted);
+}
+
+.site-menu {
+  position: relative;
+}
+
+.menu-toggle {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-content: center;
+  justify-items: center;
+  gap: 5px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--nav-bg);
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+.menu-toggle span {
+  width: 16px;
+  height: 1.5px;
+  background: currentColor;
+}
+
+.menu-toggle:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--nav-shadow);
+  background: var(--nav-hover);
+}
+
+.menu-toggle:active {
+  transform: translateY(-1px);
+}
+
+.menu-toggle:focus-visible,
+.site-title:focus-visible,
+.site-navigation a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.site-navigation {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  display: grid;
+  min-width: 9rem;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  background: var(--bg);
+  box-shadow: var(--nav-shadow);
+  justify-content: initial;
+}
+
+.site-navigation[hidden] {
+  display: none;
+}
+
+.site-navigation a {
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--text);
+  background: var(--nav-bg);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+.site-navigation a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--nav-shadow);
+  background: var(--nav-hover);
+}
+
 img {
   width: 100%;
   height: auto;
@@ -187,6 +300,22 @@ nav {
 
 .gallery-page {
   padding-top: 0.5rem;
+}
+
+.gallery-page h1,
+.about-page h1 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.about-page {
+  max-width: 38rem;
+}
+
+.about-page p {
+  margin-bottom: 1rem;
 }
 
 .gallery-grid {

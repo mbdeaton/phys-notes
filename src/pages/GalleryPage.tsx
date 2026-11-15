@@ -37,6 +37,7 @@ export default function GalleryPage() {
 
   return (
     <main className="gallery-page">
+      <h1>Gallery</h1>
       <div className="gallery-grid" aria-label="Post gallery">
         {posts.map((post) => (
           <Link
