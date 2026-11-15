@@ -50,6 +50,11 @@ figcaption {
   color: #444;
 }
 
+.post-inline-figure {
+  width: min(85%, 560px);
+  margin: 0 auto 2rem;
+}
+
 article {
   font-size: 1.1rem;
 }
