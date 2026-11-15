@@ -78,8 +78,30 @@ function InlineFigure({ figure }: { figure: PostFigure }) {
   );
 }
 
+function OriginalLetterPages({ pages }: { pages: NonNullable<PostData["originalLetterPages"]> }) {
+  if (pages.length === 0) return null;
+
+  return (
+    <details className="post-original-letter">
+      <summary>View the original handwritten letter</summary>
+      <div className="post-original-letter-pages">
+        {pages.map((page, index) => (
+          <figure key={page.asset._ref ?? index} className="post-original-letter-page">
+            <img
+              src={urlFor(page).width(1200).format("webp").url()}
+              alt={page.alt || `Original handwritten letter page ${index + 1}`}
+              loading="lazy"
+            />
+          </figure>
+        ))}
+      </div>
+    </details>
+  );
+}
+
 export default function Post({ post }: { post: PostData }) {
   const noteSections = getNoteSections(post.note ?? [], post.figures ?? []);
+  const originalLetterPages = post.originalLetterPages ?? [];
 
   return (
     <main>
@@ -100,6 +122,9 @@ export default function Post({ post }: { post: PostData }) {
           </Fragment>
         ))}
       </article>
+      {originalLetterPages.length > 0 && (
+        <OriginalLetterPages pages={originalLetterPages} />
+      )}
       <nav className="post-nav">
         <NavButton
           to={post.prev ? `/posts/${post.prev.current}` : undefined}

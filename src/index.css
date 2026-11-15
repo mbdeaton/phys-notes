@@ -55,6 +55,36 @@ figcaption {
   margin: 0 auto 2rem;
 }
 
+.post-original-letter {
+  margin-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.post-original-letter summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.post-original-letter summary::-webkit-details-marker {
+  display: none;
+}
+
+.post-original-letter-pages {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.post-original-letter-page {
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
 article {
   font-size: 1.1rem;
 }
