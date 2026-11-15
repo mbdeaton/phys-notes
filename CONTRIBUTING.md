@@ -53,6 +53,6 @@ Push to `main`: Netlify auto-deploys on every push, no manual deploy step.
 ## Extensibility notes
 - **New pages:** add a route in `App.jsx` and a new component in `src/pages/`
 - **Post index/archive:** add a `*[_type == "post"] | order(publishedAt desc)` query and a new page
-- **Math rendering:** drop in `katex` or `react-katex` for LaTeX in essays
+- **Math rendering:** drop in `katex` or `react-katex` for LaTeX in notes
 - **RSS feed:** generate at build time with a Netlify serverless function
 - **Custom domain:** add it in Netlify's domain settings for free (you just pay the registrar)

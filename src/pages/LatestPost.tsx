@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ComponentProps } from "react";
 import { client } from "../sanityClient";
 import Post from "../components/Post";
+
+type PostData = ComponentProps<typeof Post>["post"];
 
 const query = `*[_type == "post"] | order(publishedAt desc) [0] {
   title, slug, publishedAt, photo, caption, note, figures, originalLetterPages,
@@ -8,7 +10,7 @@ const query = `*[_type == "post"] | order(publishedAt desc) [0] {
 }`;
 
 export default function LatestPost() {
-  const [post, setPost] = useState<any>(null);
+  const [post, setPost] = useState<PostData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 

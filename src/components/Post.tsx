@@ -1,6 +1,5 @@
 import { urlFor } from "../sanityClient";
 import { PortableText } from "@portabletext/react";
-import { Link } from "react-router-dom";
 import NavButton from "./NavButton";
 
 interface PostData {
