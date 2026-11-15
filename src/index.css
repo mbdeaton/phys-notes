@@ -76,7 +76,7 @@ body {
   height: 2.5rem;
   align-content: center;
   justify-items: center;
-  gap: 5px;
+  gap: 2.5px;
   border: 1px solid transparent;
   border-radius: 999px;
   background: var(--nav-bg);
