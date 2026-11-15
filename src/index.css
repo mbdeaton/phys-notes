@@ -64,12 +64,23 @@ figcaption {
 .post-original-letter summary {
   cursor: pointer;
   list-style: none;
-  font-weight: 600;
-  color: var(--text);
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .post-original-letter summary::-webkit-details-marker {
   display: none;
+}
+
+.post-original-letter summary::before {
+  content: "›";
+  display: inline-block;
+  margin-right: 0.4rem;
+  transition: transform 150ms ease;
+}
+
+.post-original-letter[open] summary::before {
+  transform: rotate(90deg);
 }
 
 .post-original-letter-pages {

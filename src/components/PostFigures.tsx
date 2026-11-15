@@ -23,7 +23,7 @@ export function OriginalLetterPages({
 
   return (
     <details className="post-original-letter">
-      <summary>View the original handwritten letter</summary>
+      <summary>view original note</summary>
       <div className="post-original-letter-pages">
         {pages.map((page, index) => (
           <figure
