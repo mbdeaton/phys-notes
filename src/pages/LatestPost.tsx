@@ -3,7 +3,7 @@ import { client } from "../sanityClient";
 import Post from "../components/Post";
 
 const query = `*[_type == "post"] | order(publishedAt desc) [0] {
-  title, slug, publishedAt, photo, caption, essay,
+  title, slug, publishedAt, photo, caption, note, figures, originalLetterPages,
   "prev": *[_type == "post" && publishedAt < ^.publishedAt] | order(publishedAt desc) [0].slug
 }`;
 

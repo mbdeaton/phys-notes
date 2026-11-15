@@ -9,7 +9,11 @@ interface PostData {
   };
   caption?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  essay: any;
+  note: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  figures?: any[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  originalLetterPages?: any[];
   next?: {
     current: string;
   };
@@ -29,7 +33,7 @@ export default function Post({ post }: { post: PostData }) {
         <figcaption>{post.caption}</figcaption>
       </figure>
       <article>
-        <PortableText value={post.essay} />
+        <PortableText value={post.note} />
       </article>
       <nav className="post-nav">
         <NavButton

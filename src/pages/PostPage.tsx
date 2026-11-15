@@ -9,7 +9,11 @@ interface PostData {
   };
   caption?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  essay: any;
+  note: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  figures?: any[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  originalLetterPages?: any[];
   next?: {
     current: string;
   };
@@ -21,7 +25,7 @@ interface PostData {
 const query = (
   slug: string,
 ) => `*[_type == "post" && slug.current == "${slug}"] [0] {
-  title, slug, publishedAt, photo, caption, essay,
+  title, slug, publishedAt, photo, caption, note, figures, originalLetterPages,
   "prev": *[_type == "post" && publishedAt < ^.publishedAt] | order(publishedAt desc) [0].slug,
   "next": *[_type == "post" && publishedAt > ^.publishedAt] | order(publishedAt asc) [0].slug
 }`;
