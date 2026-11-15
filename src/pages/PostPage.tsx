@@ -2,25 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "../sanityClient";
 import Post from "../components/Post";
-
-interface PostData {
-  photo: {
-    alt?: string;
-  };
-  caption?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  note: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  figures?: any[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  originalLetterPages?: any[];
-  next?: {
-    current: string;
-  };
-  prev?: {
-    current: string;
-  };
-}
+import type { PostData } from "../types";
 
 const query = (
   slug: string,
@@ -35,7 +17,7 @@ export default function PostPage() {
   const [post, setPost] = useState<PostData | null>(null);
   useEffect(() => {
     if (slug) {
-      client.fetch(query(slug)).then(setPost);
+      client.fetch<PostData | null>(query(slug)).then(setPost);
     }
   }, [slug]);
   return post ? <Post post={post} /> : null;

@@ -1,8 +1,7 @@
-import { useEffect, useState, type ComponentProps } from "react";
+import { useEffect, useState } from "react";
 import { client } from "../sanityClient";
 import Post from "../components/Post";
-
-type PostData = ComponentProps<typeof Post>["post"];
+import type { PostData } from "../types";
 
 const query = `*[_type == "post"] | order(publishedAt desc) [0] {
   title, slug, publishedAt, photo, caption, note, figures, originalLetterPages,
@@ -16,7 +15,7 @@ export default function LatestPost() {
 
   useEffect(() => {
     client
-      .fetch(query)
+      .fetch<PostData | null>(query)
       .then((data) => setPost(data))
       .catch((err) => setError(err.message || "Failed to load post"))
       .finally(() => setLoading(false));

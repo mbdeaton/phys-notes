@@ -1,25 +1,7 @@
 import { urlFor } from "../sanityClient";
 import { PortableText } from "@portabletext/react";
 import NavButton from "./NavButton";
-
-interface PostData {
-  photo: {
-    alt?: string;
-  };
-  caption?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  note: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  figures?: any[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  originalLetterPages?: any[];
-  next?: {
-    current: string;
-  };
-  prev?: {
-    current: string;
-  };
-}
+import type { PostData } from "../types";
 
 export default function Post({ post }: { post: PostData }) {
   return (
