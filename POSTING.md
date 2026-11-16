@@ -7,6 +7,8 @@ from everday life.
 * Title: 1-6 words. Noun phrase describing the raw observation. Title case.
 * Slug: Title in snake case.
 * Picture: Ideally square.
-* Alt text: Super-brief, describing the overall view.
-* Caption: Entirely descriptive. No "notice".
+* Alt text: Super-brief, minimally describing the overall view. Lowercase,
+  no sentence punctuation.
+* Caption: Entirely descriptive. No "notice". Full sentences.
 * Note: A letter to a young physicist, by name, may contain figures.
+* Original letter pages caption: "original handwritten note [p. N]"
