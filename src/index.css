@@ -302,6 +302,7 @@ nav {
   padding-top: 0.5rem;
 }
 
+.post-page h1,
 .gallery-page h1,
 .about-page h1 {
   margin-bottom: 1rem;

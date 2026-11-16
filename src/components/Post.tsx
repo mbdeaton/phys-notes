@@ -15,7 +15,8 @@ const portableTextComponents = {
 export default function Post({ post }: { post: PostData }) {
   const noteSections = getNoteSections(post.note ?? [], post.figures ?? []);
   return (
-    <main>
+    <main className="post-page">
+      <h1>{post.title}</h1>
       <figure>
         <img
           src={urlFor(post.photo).width(1200).format("webp").url()}
