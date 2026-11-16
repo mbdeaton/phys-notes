@@ -4,7 +4,6 @@ import AboutPage from "./pages/AboutPage";
 import GalleryPage from "./pages/GalleryPage";
 import LatestPost from "./pages/LatestPost";
 import PostPage from "./pages/PostPage";
-import "./App.css";
 
 export default function App() {
   return (
