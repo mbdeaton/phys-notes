@@ -3,7 +3,7 @@ export default function AboutPage() {
     <main className="about-page">
       <h1>About</h1>
       <p>
-        A collection of short notes to real young people interested in physics.
+        A collection of short notes to young people interested in physics.
         Prompted by photographs of everyday observations.
       </p>
       <p>
@@ -17,7 +17,7 @@ export default function AboutPage() {
       </p>
       <p>
         Author/Developer: Brett Deaton, physicist and software engineer living
-        in the US, Inland Northwest.
+        in the US, inland northwest.
       </p>
       <p>
         Unless otherwise noted, original writing and photographs licensed under{" "}

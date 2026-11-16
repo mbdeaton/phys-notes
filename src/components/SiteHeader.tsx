@@ -6,12 +6,8 @@ export default function SiteHeader() {
 
   return (
     <header className="site-header">
-      <Link
-        className="site-title"
-        to="/"
-        onClick={() => setMenuOpen(false)}
-      >
-        Notes to a Young Physicist
+      <Link className="site-title" to="/" onClick={() => setMenuOpen(false)}>
+        Notes to Young Physicists
       </Link>
       <div className="site-menu">
         <button
