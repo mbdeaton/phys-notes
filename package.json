@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\"",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@portabletext/react": "^6.2.0",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.65.1",
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
