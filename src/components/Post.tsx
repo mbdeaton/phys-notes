@@ -1,10 +1,16 @@
 import { Fragment } from "react";
 import { urlFor } from "../sanityClient";
-import { PortableText } from "@portabletext/react";
+import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import NavButton from "./NavButton";
 import { InlineFigure, OriginalLetterPages } from "./PostFigures";
 import { getNoteSections } from "./postContent";
 import type { PostData } from "../types";
+
+const portableTextComponents = {
+  marks: {
+    link: ({ children, value }) => <a href={value?.href}>{children}</a>,
+  },
+} satisfies PortableTextComponents;
 
 export default function Post({ post }: { post: PostData }) {
   const noteSections = getNoteSections(post.note ?? [], post.figures ?? []);
@@ -20,7 +26,10 @@ export default function Post({ post }: { post: PostData }) {
       <article>
         {noteSections.map((section, index) => (
           <Fragment key={index}>
-            <PortableText value={section.blocks} />
+            <PortableText
+              value={section.blocks}
+              components={portableTextComponents}
+            />
             {section.figures.map((figure) => (
               <InlineFigure key={figure.anchor} figure={figure} />
             ))}
