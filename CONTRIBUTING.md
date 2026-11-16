@@ -29,14 +29,23 @@ VITE_SANITY_PROJECT_ID=project_id_here
 The local frontend reads from the live Sanity `production` dataset, so real
 content is visible immediately.
 
-Studio:
+## Running tests
+Install the Playwright browser once, then run the end-to-end suite from the
+command line:
 ```bash
-npm install
-npx sanity dev # starts at http://localhost:3333
+npx playwright install chromium
+npm run test:e2e
 ```
 
-Changes to the schema are reflected live in the local Studio. Deploy changes
-with `npx sanity deploy`.
+To run the live smoke tests against the deployed site:
+```bash
+BASE_URL=https://phys-notes.netlify.app npm run test:e2e
+```
+
+Open the HTML test report with:
+```bash
+npx playwright show-report
+```
 
 
 ## Deploying the frontend

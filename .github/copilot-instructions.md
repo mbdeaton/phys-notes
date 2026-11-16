@@ -7,4 +7,6 @@ Phys-Notes is a Vite + React + TypeScript site. `src/App.tsx` defines routes; `s
 - Keep dependencies minimal; use existing libraries and patterns.
 - Reuse components and shared types; avoid needless abstraction.
 - Preserve the site's content conventions in `POSTING.md`.
-- Validate changes with `npm run check`, `npm run lint`, or `npm run build` as appropriate.
+- Keep testing small and maintainable: prefer a minimal Playwright suite with a few live smoke checks and focused mocked cases for speccing behavior.
+- Favor simple, readable tests and low-maintenance fixtures over extra abstractions or BDD layers.
+- Validate changes with the relevant project checks, such as `npm run check`, `npm run lint`, `npm run build`. Run `npm run test:e2e` when changing behavior.
