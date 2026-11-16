@@ -11,4 +11,6 @@ from everday life.
   no sentence punctuation.
 * Caption: Entirely descriptive. No "notice". Full sentences.
 * Note: A letter to a young physicist, by name, may contain figures.
+* Note link: text is anything, hyperlink is `#fig-N`
+* Figure: name `fig-N`
 * Original letter pages caption: "original handwritten note [p. N]"
