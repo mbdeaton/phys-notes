@@ -4,8 +4,9 @@ A collection of letters written to young physicists, inspired by photos taken
 from everday life.
 
 ## Post structure
-* Title: 1-6 words. Noun phrase describing the raw observation. Title case.
+* Title: 1-6 words. Noun phrase describing the raw observation. APA title case.
 * Slug: Title in snake case.
+* Published At: Date of handwritten note, any timestamp.
 * Picture: Ideally square.
 * Alt text: Super-brief, minimally describing the overall view. Lowercase,
   no sentence punctuation.

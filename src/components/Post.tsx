@@ -16,7 +16,12 @@ export default function Post({ post }: { post: PostData }) {
   const noteSections = getNoteSections(post.note ?? [], post.figures ?? []);
   return (
     <main className="post-page">
-      <h1>{post.title}</h1>
+      <div className="post-title-row">
+        <h1>{post.title}</h1>
+        <time className="post-published-at" dateTime={post.publishedAt}>
+          {post.publishedAt.slice(0, 10)}
+        </time>
+      </div>
       <figure>
         <img
           src={urlFor(post.photo).width(1200).format("webp").url()}

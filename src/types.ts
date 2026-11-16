@@ -13,6 +13,7 @@ export type PostFigure = {
 
 export type PostData = {
   title: string;
+  publishedAt: string;
   photo: SanityImage;
   caption?: string;
   note?: PortableTextBlock[];
